@@ -10,7 +10,6 @@ function loginClick(){
         }
         localStorage.setItem("user", JSON.stringify(user))
         window.location.href = "#";
-        console.log("deu boa");
     }else{
         document.getElementById("error-modal").style.display = "flex";
         document.getElementById("user").style.border = "2px solid red";
@@ -33,3 +32,11 @@ function showPassword(){
         inputPassword.setAttribute("type", "password")
     }
 } 
+function format(item){
+    var options = {
+        mouth: "numeric",
+        day: "numeric",
+        hour: "numeric",
+        minute: "numeric",   
+    }
+}
