@@ -34,9 +34,12 @@ function showPassword(){
 } 
 function format(item){
     var options = {
-        mouth: "numeric",
+        month: "numeric",
         day: "numeric",
         hour: "numeric",
-        minute: "numeric",   
+        minute: "numeric",
+        second: "numeric",
     }
+    return item.toLocaleString("pt-BR", options);
+    console.log(options);
 }
