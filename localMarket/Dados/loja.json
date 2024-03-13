@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "descriado": "Produto 1",
+        "imagem": "./img/f2a61750f0912f71c85fc2e216a8c49f.jpg",
+        "preco": 100.0
+    },
+    {
+        "id": 2,
+        "descriado": "./img/BOT_81108_GLAMOUR-DIVA_COLONIA_AMBIENTADA_2.webp",
+        "imagem": "#",
+        "preco": 200.0
+    },
+    {
+        "id": 3,
+        "descriado": "./img/THE-BLEND-EDP_V2_B47949_Conceito.webp",
+        "imagem": "#",
+        "preco": 300.0
+    }
+]

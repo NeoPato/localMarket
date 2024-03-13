@@ -9,7 +9,7 @@ function loginClick(){
             id: Math.floor(Math.random() * 100000),
         }
         localStorage.setItem("user", JSON.stringify(user))
-        window.location.href = "#";
+        window.location.href = "../Store";
     }else{
         document.getElementById("error-modal").style.display = "flex";
         document.getElementById("user").style.border = "2px solid red";
@@ -41,5 +41,4 @@ function format(item){
         second: "numeric",
     }
     return item.toLocaleString("pt-BR", options);
-    console.log(options);
 }
