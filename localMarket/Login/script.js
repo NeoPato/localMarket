@@ -1,15 +1,16 @@
-function loginClick(){
-    var name = $('#user').val();
+function login(){
+    var userName = $('#user').val();
     var password = $('#password').val();
 
-    if(name && password && name === "admin" && password === "admin"){
+    if(userName && password && userName === "admin" && password === "admin"){
         const user = {
-            name: name,
-            entryDate: new Date(),
+            name: userName,
+            entryDate: format(new Date()),
             id: Math.floor(Math.random() * 100000),
         }
-        localStorage.setItem("user", JSON.stringify(user))
-        window.location.href = "../Store";
+
+        localStorage.setItem("user", JSON.stringify(user));
+        window.location.href = "../Store/index.html";
     }else{
         document.getElementById("error-modal").style.display = "flex";
         document.getElementById("user").style.border = "2px solid red";
@@ -27,11 +28,12 @@ function showPassword(){
     var inputPassword = document.querySelector('#password');
 
     if(inputPassword.getAttribute("type") === "password"){
-        inputPassword.setAttribute("type", "text")
-    }else{  
-        inputPassword.setAttribute("type", "password")
+        inputPassword.setAttribute("type", "text");
+    }else{
+        inputPassword.setAttribute("type", "password");
     }
-} 
+}
+
 function format(item){
     var options = {
         month: "numeric",
@@ -40,5 +42,5 @@ function format(item){
         minute: "numeric",
         second: "numeric",
     }
-    return item.toLocaleString("pt-BR", options);
+    return item.toLocaleString("pt-BR", options)
 }
